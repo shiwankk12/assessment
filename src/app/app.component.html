@@ -1,0 +1,54 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<style>
+  body{
+    font-family: ProductSans,Sans-serif;
+  }
+  .my-btn{
+    background-color: #fff;
+    color: #ff6a85;
+    font-size: 16px;
+
+  }
+.my-btn:hover
+{
+ 
+    background-color:#ff6a85;
+    color: white;
+}
+</style>
+<div *ngFor="let job of data" class="main-div" style="width: 50%;height: 200px; border: 2px solid #D3D3D3 ; border-radius: 8px;">
+  
+<div class="time-div" style="margin-top:15px;width: 100%;height: 15px; font-family: ProductSans,Sans-serif;"><span style="float:left;margin-left:2%; color:#2d6cd4;font-weight: 700;font-size: .75rem">WORKEX FULFILLED JOB </span><span style="color: #a9a9a9;font-weight: 600;float:right;margin-right:2%;">{{job.time}}</span></div>
+
+ 
+      <p class="job-title" style="margin-left:2%; font-size: 1.25rem; font-family: ProductSans,Sans-serif; font-weight: 700; font-size: 20px;;">{{job.title}}</p>
+
+      <div class="container" style="height: 40%;padding: 5px;">
+
+        <div class="first-row" style="height: 30%;padding:1px; width: 70%;">
+          <div class="left" style=" float:left;padding:5px;margin-right:25px;margin-left:30px;width:40%;">{{job.category[0].key}}</div>
+          <div class="right" style="float:left;padding:5px;width:40%;">{{job.compensation}}</div>
+        </div>
+
+        <div class="second-row" style="height: 40%;padding:1px;width: 70%;margin-top:2%;">
+            <div class="left" style=" float:left;padding:5px;margin-right:25px;margin-left:30px;width:40%;">{{job.city}}</div>
+            <div class="right" style="float:left;padding:5px;width:40%;">Job Posted by {{job.company_name}}</div>
+
+            <div class="btn" style="float: right; position: absolute;margin-left:40%">
+                <button class="my-btn" style="width:100px;height: 50px;cursor: pointer;border: 1px solid #ff6a85;border-radius: 10px;">VIEW JOB</button>
+            </div>
+            
+          </div>
+         
+          
+         
+      </div>
+      
+    
+  
+
+</div>
+
+<router-outlet></router-outlet>
